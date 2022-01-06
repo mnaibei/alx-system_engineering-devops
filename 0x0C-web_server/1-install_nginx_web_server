@@ -7,7 +7,7 @@ if [ $? -eq 0 ]
 then
     echo -e \
 "http {
-    root /var/www/holberton;
+    root /var/www/alx;
     index index.html;
     server {
         listen 80;
@@ -17,9 +17,9 @@ then
 }
 events {
 }" > /etc/nginx/nginx.conf
-    mkdir -p /var/www/holberton
+    mkdir -p /var/www/alx
     echo "Hello World" > \
-	/var/www/holberton/index.html
+	/var/www/alx/index.html
     service nginx start
     if [ $? -ne 0 ]
     then
