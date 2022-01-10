@@ -2,7 +2,7 @@
 #install ngix and put holberton inside
 
 sudo apt-get update -y && \
-sudo apt-get install -y nginx
+sudo apt-get install nginx -y
 if [ $? -eq 0 ]
 then
     echo -e \
@@ -18,7 +18,7 @@ then
 events {
 }" > /etc/nginx/nginx.conf
     mkdir -p /var/www/alx
-    echo "Hello World" > \
+    echo "Hello World!" > \
 	/var/www/alx/index.html
     service nginx start
     if [ $? -ne 0 ]
